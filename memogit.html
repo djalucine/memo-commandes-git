@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <link rel="stylesheet" href="style2.css" />
 
         <title>Memo Commandes GIT</title>
 
@@ -16,16 +17,17 @@
   <h2>Créer un nouveau dépôt</h2>
 
         <p>créer un nouveau dossier ou un dépot
-        </br> git init </p>
+        </br> <em>git init</em> </p>
+        <!--emphasized text tag for css-->
 
 
 <h2>Cloner un dépôt</h2>
     <p>  créer une copie du dépôt local :
-        </br>git clone /path/to/repository
+    </br><em>git clone /path/to/repository</em>
 </br>
 commande en cas de serveur distant :
 </br>
-git clone username@host:/path/to/repository
+<em>git clone username@host:/path/to/repository</em>
 </p>
 
 
@@ -35,10 +37,54 @@ git clone username@host:/path/to/repository
     </br>
 
       <ol> <!--list-->
-              <li>L'espace de travail contient réellement les fichiers.</li>
-              <li>L'Index a un rôle d'espace de transit pour les fichiers </li>
-              <li> HEAD pointe vers la dernière validation faite.</li>
+              <li><em>L'espace de travail </em>contient réellement les fichiers.</li>
+              <li>L'<em>Index </em> a un rôle d'espace de transit pour les fichiers </li>
+              <li> <em>HEAD</em> pointe vers la dernière validation faite.</li>
 </p>
+
+<h2>Ajouter et Valider</h2>
+    <p>  Proposer un changement (l'ajouter à l'Index) :
+    </br><em>git add < filename></em>
+  </br> <em>git add *</em>
+
+      </br>Pour valider ces changements (fichier est dans HEAD, mais pas encore dans le dépôt distant.) </br>
+<em>git commit -m "Message de validation"</em>
+      </br>
+</p>
+
+<h2>Envoyer des Changements</h2>
+    <p>  Les changements sont dans le HEAD de la copie du dépôt local. Pour les envoyer au dépôt distant:
+    </br><em>git push origin master</em>
+
+      </br> Si le  dépôt n'a pas été cloné pour le connecter au dépôt sur un serveur distant, l'ajouter avec
+    </br><em>git remote add origin < server></em>
+</p>
+
+<h2>Branches</h2>
+    <p>  Les branches sont utilisées pour développer des fonctionnalités isolées des autres. La branche master est la branche par défaut.
+    </br> Créer une nouvelle branche nommée "feature_x" et passer dessus pour l'utiliser
+  </br><em>git checkout -b feature_x</em>
+
+
+  </br> retourner sur la branche principale
+</br> ><em>git checkout master </em>
+</br> et supprimer la branche
+</br><em>git branch -d feature_x</em>
+</br>une branche n'est pas disponible pour les autres tant que vous ne l'aurez pas envoyée vers votre dépôt distant
+</br> <em>git push origin < branch> </em>
+</p>
+
+
+<h2>Mettre à jour et Fusionner</h2>
+    <p> Mettre à jour un dépôt local vers les dernières validations :
+</br> <em>git pull </em>
+    </br> dans l'espace de travail pour récupérer et fusionner les changements distants
+ pour fusionner une autre branche avec la branche active (par exemple master):
+</br> <em>git merge < branch></em>
+</br> dans les deux cas, git tente d'auto-fusionner les changements. En cas de conflits. Il faut régler ces conflits manuellement en éditant les fichiers indiqués par git puis les marquer comme fusionnés avec
+</br> <em>git add < filename></em>
+</br> après avoir fusionné les changements, il est possible d'en avoir un aperçu en utilisant
+</br> <em>git diff < source_branch> < target_branch></em>
 
 
 
