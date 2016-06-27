@@ -1,28 +1,29 @@
 h1
 {
   color: #521421;
-  text-align :center;
+  text-align :center; /* Tous les éléments h1 seront centrés et de couleur #521421 */
 }
 h2
 {
   color: #521421;
-  text-align :center;
+  text-align :center; /* Tous les éléments h2 seront centrés et de couleur #521421 */
 }
 em
 {
   color: #BE394F;
-  font-family:monospace;
+  font-family:monospace; /* Tous les éléments em seront de couleur #BE394F de police monospace et de taille 15 pt */
   font-size: 15pt
 }
 
 html
 
-{ background-image: url("imgit.jpg")
+{ background-image: url("imgit.jpg") /* Toute la zone html aura pour fond l image imgit */
 }
+
 body
  {
   text-align:center;
-  font-family:monospace;
+  font-family:monospace; /* Tous les éléments du body seront centrés, de police monospace et de taille 15 pt*/
   font-size: 15pt
 
 }
