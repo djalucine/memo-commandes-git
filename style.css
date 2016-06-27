@@ -1,0 +1,28 @@
+h1
+{
+  color: #521421;
+  text-align :center;
+}
+h2
+{
+  color: #521421;
+  text-align :center;
+}
+em
+{
+  color: #BE394F;
+  font-family:monospace;
+  font-size: 15pt
+}
+
+html
+
+{ background-image: url("imgit.jpg")
+}
+body
+ {
+  text-align:center;
+  font-family:monospace;
+  font-size: 15pt
+
+}
